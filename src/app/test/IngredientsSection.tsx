@@ -26,8 +26,8 @@ export const IngredientsSection = ({
         let newTotal = 0;
 
         if(values.ingredients) {
-            values.ingredients.forEach((ingredient: any) => {
-                newTotal += (ingredient.price) * (ingredient.qty);
+            values.ingredients.map((ingredient: any) => {
+               return newTotal += (ingredient.price) * (ingredient.qty);
             });
         }
 
@@ -89,7 +89,6 @@ export const IngredientsSection = ({
                                     <input type="number"
                                     value={total}
                                     className='block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-                                    disabled
                                     />
                                 </div>
                             </div>

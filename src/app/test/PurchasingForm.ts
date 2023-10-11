@@ -46,7 +46,7 @@ export const emptyIngredients: Ingredient = {
 
 export const usePurchasingForm = () => {
     return useForm<Purchasing> ({
-        mode: 'onSubmit',
+        mode: 'onChange',
         resolver: yupResolver(schema),
         defaultValues : {
             ingredients:[emptyIngredients],
